@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Register - SHISHA GRAPHIC DESIGN</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1e3a8a, #2563eb);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 30px;
+        }
+
+        .register-container {
+            width: 450px;
+            background: white;
+            padding: 35px;
+
+            border-radius: 12px;
+
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .heading {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .heading h1 {
+            color: #1e3a8a;
+            font-size: 26px;
+        }
+
+        .heading p {
+            color: #666;
+            margin-top: 8px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 7px;
+
+            font-weight: bold;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 11px;
+
+            border: 1px solid #ccc;
+            border-radius: 6px;
+
+            margin-bottom: 16px;
+
+            font-size: 15px;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #2563eb;
+        }
+
+        .register-btn {
+            width: 100%;
+            padding: 13px;
+
+            border: none;
+            border-radius: 6px;
+
+            background: #2563eb;
+            color: white;
+
+            font-size: 16px;
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+        .register-btn:hover {
+            background: #1d4ed8;
+        }
+
+        .login-link {
+            text-align: center;
+            margin-top: 18px;
+            color: #555;
+        }
+
+        .login-link a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="register-container">
+
+        <div class="heading">
+            <h1>SHISHA GRAPHIC DESIGN</h1>
+            <p>Create Student Account</p>
+        </div>
+
+        <form action="/register" method="POST">
+
+            <label for="name">Full Name</label>
+
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your full name"
+                required
+            >
+
+
+            <label for="email">Email</label>
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+            >
+
+
+            <label for="password">Password</label>
+
+            <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Create a password"
+                required
+            >
+
+
+           <label for="qualification">Qualification / Degree</label>
+
+<input
+    type="text"
+    id="qualification"
+    name="qualification"
+    placeholder="Example: BCA / B.Sc CS / B.E CSE"
+    required
+>
+
+
+            <label for="phone">Phone Number</label>
+
+            <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Enter your phone number"
+                required
+            >
+
+
+            <label for="cgpa">CGPA</label>
+
+            <input
+                type="number"
+                id="cgpa"
+                name="cgpa"
+                placeholder="Enter your CGPA"
+                step="0.01"
+                min="0"
+                max="10"
+                required
+            >
+
+
+            <label for="skills">Skills</label>
+
+            <input
+                type="text"
+                id="skills"
+                name="skills"
+                placeholder="Example: Python, HTML, MySQL"
+                required
+            >
+
+
+            <button type="submit" class="register-btn">
+                Create Account
+            </button>
+
+        </form>
+
+        <div class="login-link">
+            Already have an account?
+            <a href="/">Login</a>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

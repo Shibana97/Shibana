@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Job Details - SHISHA GRAPHIC DESIGN</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #f4f7fb;
+        }
+
+        .header {
+            background: #1e3a8a;
+            color: white;
+
+            padding: 18px 40px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .company-name {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .logout {
+            background: #ef4444;
+            color: white;
+
+            padding: 9px 16px;
+
+            border-radius: 6px;
+
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .main {
+            max-width: 750px;
+
+            margin: 50px auto;
+
+            padding: 0 20px;
+        }
+
+        .job-box {
+            background: white;
+
+            padding: 35px;
+
+            border-radius: 12px;
+
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .job-title {
+            color: #1e3a8a;
+
+            font-size: 30px;
+
+            margin-bottom: 25px;
+
+            border-bottom: 2px solid #eee;
+
+            padding-bottom: 15px;
+        }
+
+        .detail {
+            margin-bottom: 20px;
+        }
+
+        .detail strong {
+            display: block;
+
+            color: #333;
+
+            margin-bottom: 6px;
+
+            font-size: 15px;
+        }
+
+        .detail span {
+            color: #555;
+
+            font-size: 16px;
+        }
+
+        .buttons {
+            margin-top: 30px;
+
+            display: flex;
+
+            gap: 15px;
+        }
+
+        .apply-btn {
+            flex: 1;
+
+            padding: 13px;
+
+            background: #2563eb;
+
+            color: white;
+
+            text-align: center;
+
+            text-decoration: none;
+
+            border-radius: 6px;
+
+            font-weight: bold;
+        }
+
+        .apply-btn:hover {
+            background: #1d4ed8;
+        }
+
+        .back-btn {
+            flex: 1;
+
+            padding: 13px;
+
+            background: #e5e7eb;
+
+            color: #333;
+
+            text-align: center;
+
+            text-decoration: none;
+
+            border-radius: 6px;
+
+            font-weight: bold;
+        }
+
+        .back-btn:hover {
+            background: #d1d5db;
+        }
+
+        @media (max-width: 600px) {
+
+            .header {
+                padding: 15px 20px;
+            }
+
+            .company-name {
+                font-size: 17px;
+            }
+
+            .main {
+                margin-top: 30px;
+            }
+
+            .buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <div class="header">
+
+        <div class="company-name">
+            SHISHA GRAPHIC DESIGN
+        </div>
+
+        <a href="/logout" class="logout">
+            Logout
+        </a>
+
+    </div>
+
+
+    <!-- Job Details -->
+
+    <div class="main">
+
+        <div class="job-box">
+
+            <h1 class="job-title">
+                {{ job.job_title }}
+            </h1>
+
+
+            <div class="detail">
+
+                <strong>Company</strong>
+
+                <span>
+                    {{ job.company_name }}
+                </span>
+
+            </div>
+
+
+            <div class="detail">
+
+                <strong>Location</strong>
+
+                <span>
+                    {{ job.location }}
+                </span>
+
+            </div>
+
+
+            <div class="detail">
+
+                <strong>Salary</strong>
+
+                <span>
+                    {{ job.salary }}
+                </span>
+
+            </div>
+
+
+            <div class="detail">
+
+                <strong>Minimum CGPA</strong>
+
+                <span>
+                    {{ job.eligibility_cgpa }}
+                </span>
+
+            </div>
+
+
+            <div class="detail">
+
+                <strong>Skills Required</strong>
+
+                <span>
+                    {{ job.skills_required }}
+                </span>
+
+            </div>
+
+
+            <div class="detail">
+
+                <strong>Drive Date</strong>
+
+                <span>
+                    {{ job.drive_date }}
+                </span>
+
+            </div>
+
+
+            <div class="buttons">
+
+                <a href="/jobs" class="back-btn">
+                    Back to Jobs
+                </a>
+
+                <a href="/apply/{{ job.id }}" class="apply-btn">
+                    Apply Now
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
